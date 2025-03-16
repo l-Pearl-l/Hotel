@@ -1,3 +1,5 @@
+@import url(variables.css);
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,8 +17,8 @@ body {
 }
 
 header {
-    background-color: #001F3F;
-    color: white;
+    background-color: var(--dark-blue);
+    color: var(--white);
     padding: 1rem;
 }
 
@@ -39,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -77,8 +79,8 @@ h2 {
 }
 
 .card h3 {
-    background-color: #001F3F; /* Тёмно-синий заголовок */
-    color: white;
+    background-color: var(--dark-blue); /* Тёмно-синий заголовок */
+    color: var(--white);
     padding: 10px 0; /* Отступы для заголовка */
 }
 
@@ -91,16 +93,19 @@ h2 {
     display: inline-block;
     margin: 15px 0;
     padding: 10px 20px;
-    background-color: #001F3F; /* Тёмно-синий */
-    color: white;
+    background-color: var(--dark-blue); /* Тёмно-синий */
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px; /* Скругление кнопки */
 }
 
 footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     box-sizing: border-box;
-    background-color: #001F3F; /* Тёмно-синий */
-    color: white;
+    background-color: var(--dark-blue); /* Тёмно-синий */
+    color: var(--white);
     text-align: center;
     padding: 1rem;
     position: relative;
@@ -127,6 +132,9 @@ footer {
 
     header {
         text-align: center; /* Центрируем текст в заголовке */
+    }
+    footer{
+        flex-direction: column;
     }
 }
 

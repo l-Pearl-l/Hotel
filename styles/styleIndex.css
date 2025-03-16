@@ -75,12 +75,39 @@ nav ul li a {
     color: var(--white);
 }
 
+.about{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-slider-container{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-slider{
+    height: 600px;
+    width: 55%;
+}
+
+.text-about-us-container{
+    width: 20%;
+    text-align: justify;
+}
+
+.about-slider-container-stars{
+    width: 100%;
+}
+
 main {
     padding: 20px;
     border: 1px solid transparent;
 }
 
-section {
+section{
+    justify-content: space-between;
     box-sizing: border-box;
     margin: 10px 0;
 }
