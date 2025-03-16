@@ -5,7 +5,7 @@ const slider = {
 
     intervalId: setInterval(() => this.showNextPhoto, 3000),
     currentIndexPhoto: 0,
-    photos: ["HotelRoom1.png", "HotelRoom2.png"],
+    photos: ["HotelRoom1.png", "ComfortHotelRoom.png", "StandartHotelRoom.png", "HotelRoom2.png", "LuxuryHotelRoom.png"],
     blockSlider: document.querySelector(".hero-image"),
     buttonForward: document.querySelector(".forward"),
     buttonBack: document.querySelector(".back"),
