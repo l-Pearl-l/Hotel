@@ -17,7 +17,7 @@
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#about">О нас</a></li>
                     <li><a href="apartments.html">Апартаменты</a></li>
-                    <li><a href="#events">События</a></li>
+                    <li><a href="#hotel-rooms">События</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -26,44 +26,44 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-title">
+            <div class="hero__title">
                 <h2>Добро пожаловать в "Созвездие"</h2>
                 <p>Ваш отдых начинается здесь, среди звёзд!</p>
             </div>
-            <div class="hero-image">
-                <button class="hero-button back">&#8249;</button>
-                <img class="slider" src="images/HotelRoom1.png" alt="Гостиница Созвездие">
-                <button class="hero-button forward">&#8250;</button>
+            <div class="hero__container-slider">
+                <button class="button-slider hero__button-back">&#8249;</button>
+                <img class="hero__image-in-slider" src="images/HotelRoom1.png" alt="Гостиница Созвездие">
+                <button class="button-slider hero__button-forward">&#8250;</button>
             </div>
         </section>
-
-        <section id="events">
-            <h2>Номера</h2>
-            <p>У нас есть номера где вы сможете отдохнуть после долгой дороги или остать если приехали в наш город как
-                турист</p>
-            <img src="images/events-image.jpg" alt="Номера гостиницы" class="events-image">
-        </section>
-
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <ul>
-                <li>Комфортабельные номера с красивыми видами</li>
-                <li>Собственный ресторан с разнообразным меню</li>
-                <li>SPA и велнес-услуги для вашего отдыха</li>
-                <li>Конференц-залы для мероприятий</li>
-            </ul>
-            <img src="images/services-image.jpg" alt="Услуги гостиницы" class="services-image">
+        
+        <section class="services-hotel-rooms">
+            <section id="hotel-rooms" class="services-hotel-rooms__hotel-rooms">
+                <h2>Номера</h2>
+                <p>У нас есть номера где вы сможете отдохнуть после долгой дороги или остать если приехали в наш город как
+                    турист</p>
+            </section>
+    
+            <section id="services" class="services-hotel-rooms__services">
+                <h2>Наши услуги</h2>
+                <ul>
+                    <li>Комфортабельные номера с красивыми видами</li>
+                    <li>Собственный ресторан с разнообразным меню</li>
+                    <li>SPA и велнес-услуги для вашего отдыха</li>
+                    <li>Конференц-залы для мероприятий</li>
+                </ul>
+            </section>
         </section>
 
         <section class="about" id="about">
-            <div class="about-slider-container">
-                <button class="hero-button back-about-us">&#8249;</button>
-                <img class="about-slider" src="images/Bear.jpg" alt="Гостиница Созвездие">
-                <button class="hero-button forward-about-us">&#8250;</button>
+            <div class="about__slider-container">
+                <button class="button-slider about__button-back">&#8249;</button>
+                <img class="about__image-in-slider" src="images/Bear.jpg" alt="Гостиница Созвездие">
+                <button class="button-slider about__button-forward">&#8250;</button>
             </div>
-            <div class="text-about-us-container">
-                <h2>О нас</h2>
-                <p class="text-about-us">
+            <div class="about__container-text">
+                <h2 class="about__title">О нас</h2>
+                <p class="about__text">
                     Добро пожаловать в гостиницу «Созвездие» — место, где каждая деталь создана для вашего комфорта и
                     вдохновения. Название нашего отеля выбрано не случайно: как звёзды на ночном небе, мы стремимся
                     стать
@@ -102,7 +102,7 @@
         </section>
         <p>&copy; 2025 Гостиница "Созвездие". Все права защищены.</p>
     </footer>
-    <script src="js/slider.js"></script>
+    <script src="js/sliderHero.js"></script>
     <script src="js/calcHeigthNavPanel.js"></script>
     <script src="js/sliderAboutUs.js"></script>
 </body>

@@ -42,6 +42,17 @@ nav ul li a {
     text-decoration: none;
 }
 
+.button-slider{
+    height: 50px;
+    width: 30px;
+    font-size: 30px;
+    margin: auto 0;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+}
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -53,26 +64,28 @@ nav ul li a {
     padding: 10px 20px;
 }
 
-.hero-image{
+.hero__title{
+    width: 40%;
+    text-align: center;
+}
+
+.hero__container-slider{
     display: flex;
     width: 60%;
     height: 100%;
     gap: 20px;
 }
 
-.hero-image > img{
+.hero__image-in-slider{
     width: 100%;
 }
 
-.hero-button{
-    height: 50px;
-    width: 30px;
-    font-size: 30px;
-    margin: auto 0;
-    background-color: var(--dark-blue);
-    border: none;
-    border-radius: 10px;
-    color: var(--white);
+.services-hotel-rooms{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+    justify-content: space-around;
 }
 
 .about{
@@ -80,7 +93,7 @@ nav ul li a {
     justify-content: space-around;
 }
 
-.about-slider-container{
+.about__slider-container{
     box-sizing: border-box;
     display: flex;
     width: 40%;
@@ -88,12 +101,12 @@ nav ul li a {
     gap: 20px;
 }
 
-.about-slider{
+.about__image-in-slider{
     height: 600px;
     width: 55%;
 }
 
-.text-about-us-container{
+.about__container-text{
     width: 25%;
     text-align: justify;
     background-color: var(--dark-blue);
@@ -112,11 +125,6 @@ section{
     margin: 10px 0;
 }
 
-.hero-title{
-    width: 40%;
-    text-align: center;
-}
-
 footer {
     display: flex;
     justify-content: space-around;
@@ -131,7 +139,12 @@ footer {
     width: 100%;
 }
 
-.hero-button:hover{
+.image--size{
+    object-fit: contain;
+    height: 600px;
+}
+
+.button-slider:hover{
     background-color: var(--dark-blue-hover);
 }
 

@@ -6,10 +6,10 @@ const sliderAboutUs = {
     intervalId: setInterval(() => this.showNextPhoto, 3000),
     currentIndexPhoto: 0,
     photos: ["Dragon.jpg", "Eagle.jpg", "Girl.jpg", "Lion.jpg", "Swan.jpg", "Bear.jpg"],
-    blockSlider: document.querySelector(".about-slider-container"),
-    buttonForward: document.querySelector(".forward-about-us"),
-    buttonBack: document.querySelector(".back-about-us"),
-    sliderInDocument: document.querySelector(".about-slider"),
+    blockSlider: document.querySelector(".about__slider-container"),
+    buttonForward: document.querySelector(".about__button-forward"),
+    buttonBack: document.querySelector(".about__button-back"),
+    imageInSlider: document.querySelector(".about__image-in-slider"),
 
     scrollPhotosForward: function(){
         this.buttonForward.addEventListener("click", () => {
@@ -17,7 +17,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.sliderInDocument.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
         })
     },
 
@@ -27,7 +27,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto < 0){
                 this.currentIndexPhoto = this.photos.length - 1;
             }
-            this.sliderInDocument.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
             
         })
     },
@@ -37,7 +37,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.sliderInDocument.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
     },
 
     autoPlay: function(){
