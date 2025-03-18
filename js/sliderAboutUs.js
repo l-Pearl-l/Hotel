@@ -3,6 +3,7 @@
 
 const sliderAboutUs = {
 
+    pathDirectory: "images/SliderAbout/",
     intervalId: setInterval(() => this.showNextPhoto, 3000),
     currentIndexPhoto: 0,
     photos: ["Dragon.jpg", "Eagle.jpg", "Girl.jpg", "Lion.jpg", "Swan.jpg", "Bear.jpg"],
@@ -17,7 +18,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
         })
     },
 
@@ -27,7 +28,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto < 0){
                 this.currentIndexPhoto = this.photos.length - 1;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
             
         })
     },
@@ -37,7 +38,7 @@ const sliderAboutUs = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
     },
 
     autoPlay: function(){

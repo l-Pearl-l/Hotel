@@ -3,6 +3,7 @@
 
 const slider = {
 
+    pathDirectory: "images/SliderHero/",
     intervalId: setInterval(() => this.showNextPhoto, 3000),
     currentIndexPhoto: 0,
     photos: ["HotelRoom1.png", "ComfortHotelRoom.png", "StandartHotelRoom.png", "HotelRoom2.png", "LuxuryHotelRoom.png"],
@@ -17,7 +18,7 @@ const slider = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
         })
     },
 
@@ -27,7 +28,7 @@ const slider = {
             if(this.currentIndexPhoto < 0){
                 this.currentIndexPhoto = this.photos.length - 1;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
             
         })
     },
@@ -37,7 +38,7 @@ const slider = {
             if(this.currentIndexPhoto > this.photos.length - 1){
                 this.currentIndexPhoto = 0;
             }
-            this.imageInSlider.src = "images/" + this.photos[this.currentIndexPhoto];
+            this.imageInSlider.src = this.pathDirectory + this.photos[this.currentIndexPhoto];
     },
 
     autoPlay: function(){

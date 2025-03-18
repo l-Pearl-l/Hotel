@@ -26,7 +26,7 @@ header {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -55,7 +55,7 @@ h2 {
 }
 
 
-.apartment-cards {
+.apartment__cards {
     display: flex;
     flex-wrap: wrap; /* Позволяет картам переноситься на новую строку */
     gap: 20px; /* Отступы между картами */
@@ -101,7 +101,7 @@ h2 {
 
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
     background-color: var(--dark-blue); /* Тёмно-синий */
@@ -113,7 +113,7 @@ footer {
     width: 100%;
 }
 
-/* Адаптивные стили */
+
 @media (max-width: 1024px) {
     .card {
         width: 45%; /* Две карточки в строку для планшетов */
