@@ -1,5 +1,16 @@
+
+
+.booking-modal-container{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
 .booking-modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -9,6 +20,11 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень */
     width: 100%; /* Ширина на мобильных устройствах */
     max-width: 400px; /* Максимальная ширина для больших экранов */
+}
+
+.booking-modal__close{
+    position: absolute;
+    right: 20px;
 }
 
 .booking-modal h2 {
@@ -24,7 +40,7 @@
 
 .booking-modal input[type="date"],
 .booking-modal select {
-    width: 100%; /* Полная ширина */
+    width: 95%; /* Полная ширина */
     padding: 10px; /* Отступы */
     border: 1px solid #ddd; /* Легкая граница */
     border-radius: 5px; /* Закругленные углы */
