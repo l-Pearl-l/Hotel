@@ -58,7 +58,7 @@ body{
     gap: 20px;
 }
 
-.main__cards__row--style{
+.main__cards__row{
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -69,7 +69,7 @@ body{
     border: 1px solid #ddd;
     border-radius: 10px; 
     overflow: hidden;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 25%;
 }
@@ -105,7 +105,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    background-color: var(--dark-blue); /* Тёмно-синий */
+    background-color: var(--dark-blue);
     color: var(--white);
     text-align: center;
     padding: 1rem;
@@ -116,4 +116,27 @@ footer {
 
 .contacts > h2{
     padding-bottom: 15px;
+}
+
+@media (max-width: 768px){
+    .header__list-items{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main__cards{
+        align-items: center;
+    }
+
+    .main__card{
+        width: 100%;
+    }
+
+    .main__cards__row{
+        flex-direction: column;
+    }
+
+    footer{
+        flex-direction: column;
+    }
 }
