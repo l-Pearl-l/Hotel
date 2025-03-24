@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleForClassesHotelRoom.css">
+    <link rel="stylesheet" href="styles/styleModelWindowBooking.css">
+    <title>Комфортные номера</title>
+</head>
+<body>
+    <div class="box">
+        <header class="header">
+            <div class="header__container">
+                <h1>Гостиница "Созвездие"</h1>
+                <nav class="header__nav-panel">
+                    <ul class="header__list-items">
+                        <li class="header__list-item"><a class="link--style" href="index.html">Главная</a></li>
+                        <li class="header__list-item"><a class="link--style" href="index.html#about">О нас</a></li>
+                        <li class="header__list-item"><a class="link--style" href="apartments.html">Апартаменты</a></li>
+                        <li class="header__list-item"><a class="link--style" href="index.html#services">Услуги</a></li>
+                        <li class="header__list-item"><a class="link--style" href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main__cards">   
+                <div class="main__cards__row">
+                    <div class="main__card comfort">
+                        <img class="main__card__image" src="images/ClassRoomComfort/Comfort1.jpg" alt="Комфортный номер">
+                        <h3>Комфорт</h3>
+                        <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button comfort1">Забронировать</button>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="images/ClassRoomComfort/Comfort2.jpg" alt="Комфортный номер">
+                        <h3>Комфорт</h3>
+                        <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button comfort2">Забронировать</button>
+                    </div>
+                    <div class="main__card">
+                        <img class="main__card__image" src="images/ClassRoomComfort/Comfort3.jpg" alt="Комфортный номер">
+                        <h3>Комфорт</h3>
+                        <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button">Забронировать</button>
+                    </div>
+                </div>
+                <div class="main__cards__row">
+                    <div class="main__card">
+                    <img class="main__card__image" src="images/ClassRoomComfort/Comfort4.jpg" alt="Комфортный номер">
+                    <h3>Комфорт</h3>
+                    <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button">Забронировать</button>
+                    </div>
+                    <div class="main__card">
+                    <img class="main__card__image" src="images/ClassRoomComfort/Comfort5.jpg" alt="Комфортный номер">
+                    <h3>Комфорт</h3>
+                    <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button">Забронировать</button>
+                    </div>
+                    <div class="main__card">
+                    <img class="main__card__image" src="images/ClassRoomComfort/Comfort6.jpg" alt="Комфортный номер">
+                    <h3>Комфорт</h3>
+                    <ul>
+                            <li>Однокомнатный номер</li>
+                            <li>Вид на хвойный лес</li>
+                            <li>Двуспальная кровать</li>
+                            <li>Ванная комната</li>
+                        </ul>
+                        <button class="booking-button">Забронировать</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section id="contacts" class="contacts">
+                <h2>Контакты</h2>
+                <p>Телефон: +7 (4752) 559 - 664</p>
+                <p>Email: tambov-sozvezdie@mail.ru</p>
+            </section>
+            <p>&copy; 2025 Гостиница "Созвездие". Все права защищены.</p>
+        </footer>
+        <div class="booking-modal-container">
+            <div class="booking-modal">
+                <div class="booking-modal__close">X</div>
+                <h2>Бронирование номера</h2>
+                <form id="booking-form" class="booking-form">
+                    <label for="checkin">Дата заезда:</label>
+                    <input type="date" id="checkin" name="arrival" required>
+            
+                    <label for="checkout">Дата выезда:</label>
+                    <input type="date" id="checkout" name="departure" required>
+            
+                    <label for="adults">Количество взрослых:</label>
+                    <select id="adults" name="adults" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+            
+                    <label for="children">Количество детей:</label>
+                    <select id="children" name="children">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+            
+                    <button type="submit" class="submit-button">Забронировать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/openModalWindow.js"></script>
+    <script src="js/interationBackend.js"></script>
+</body>
+</html>
