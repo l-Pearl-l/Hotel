@@ -112,7 +112,8 @@
                 <form id="booking-form" class="booking-form">
                     <label for="checkin">Дата заезда:</label>
                     <input type="date" id="checkin" name="arrival" required>
-            
+                    <span class="exeption-date">Дата заезда не может быть позже даты выезда</span>
+                    <span class="exeption-date-past">Нельзя забронировать на прошедшую дату</span>
                     <label for="checkout">Дата выезда:</label>
                     <input type="date" id="checkout" name="departure" required>
             

@@ -115,7 +115,8 @@
             
                     <label for="checkout">Дата выезда:</label>
                     <input type="date" id="checkout" name="departure" required>
-            
+                    <span class="exeption-date">Дата заезда не может быть позже даты выезда</span>
+                    <span class="exeption-date-past">Нельзя забронировать на прошедшую дату</span>
                     <label for="adults">Количество взрослых:</label>
                     <select id="adults" name="adults" required>
                         <option value="1">1</option>

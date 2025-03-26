@@ -46,7 +46,7 @@
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button">Забронировать</button>
+                        <button class="booking-button luxury2">Забронировать</button>
                     </div>
                     <div class="main__card">
                         <img class="main__card__image" src="images/ClassRoomLuxury/Luxury3.jpg" alt="Люкс Шале номер">
@@ -57,7 +57,7 @@
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button">Забронировать</button>
+                        <button class="booking-button luxury3">Забронировать</button>
                     </div>
                 </div>
                 <div class="main__cards__row">
@@ -70,7 +70,7 @@
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button">Забронировать</button>
+                        <button class="booking-button luxury4">Забронировать</button>
                     </div>
                     <div class="main__card">
                     <img class="main__card__image" src="images/ClassRoomLuxury/Luxury5.jpg" alt="Люкс Шале номер">
@@ -81,7 +81,7 @@
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button">Забронировать</button>
+                        <button class="booking-button luxury5">Забронировать</button>
                     </div>
                     <div class="main__card">
                     <img class="main__card__image" src="images/ClassRoomLuxury/Luxury6.jpg" alt="Люкс Шале номер">
@@ -92,7 +92,7 @@
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button">Забронировать</button>
+                        <button class="booking-button luxury6">Забронировать</button>
                     </div>
                 </div>
             </section>
@@ -112,7 +112,8 @@
                 <form id="booking-form" class="booking-form">
                     <label for="checkin">Дата заезда:</label>
                     <input type="date" id="checkin" name="arrival" required>
-            
+                    <span class="exeption-date">Дата заезда не может быть позже даты выезда</span>
+                    <span class="exeption-date-past">Нельзя забронировать на прошедшую дату</span>            
                     <label for="checkout">Дата выезда:</label>
                     <input type="date" id="checkout" name="departure" required>
             
