@@ -1,7 +1,8 @@
 
 const bookingForm = document.querySelector(".booking-form");
-const exeptionDate = document.querySelector(".exeption-date")
-const exeptionDatePast = document.querySelector(".exeption-date-past")
+const exeptionDate = document.querySelector(".exeption-date");
+const exeptionDatePast = document.querySelector(".exeption-date-past");
+
 let busyHotelRooms = []
 let chooseRoom;
 
@@ -39,14 +40,14 @@ bookingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-
+    const oneDay = (24 * 60 * 60 * 1000)
     const data = {}
 
     formData.forEach((value, key) => {
         data[key] = value;
     })
 
-    if(new Date(data.arrival) < new Date(Date.now())){
+    if(new Date(data.arrival) < new Date(Date.now() - oneDay)){
         exeptionDatePast.style.display = "inline";
     }
     else if(new Date(data.arrival) > new Date(data.departure)){
@@ -68,6 +69,5 @@ bookingForm.addEventListener("submit", (event) => {
         }).then(response => response.text())
           .then(result => window.location.reload())
     }
-
-    
 })
+

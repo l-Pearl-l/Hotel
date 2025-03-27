@@ -16,18 +16,20 @@ body{
 }
 
 .header{
-    background-color: var(--dark-blue);
     color: var(--white);
-    padding: 1rem;
+    width: 100%;
 }
 
 
 .header__container{
+    position: fixed;
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+    justify-content: space-around;
     align-items: center;
+    height: 100px;
+    background-color: var(--dark-blue);
+    width: 100%;
+    z-index: 100;
 }
 
 .header__list-items{
