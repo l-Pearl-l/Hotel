@@ -139,7 +139,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
-    background-color: #001F3F; /* Тёмно-синий */
+    background-color: var(--dark-blue); 
     color: white;
     text-align: center;
     padding: 1rem;

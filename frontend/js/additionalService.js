@@ -30,7 +30,7 @@ deleteServices.forEach(button => {
                 button.textContent = "Добавить";
                 
             }
-        })~
+        })
     })
 })
 
