@@ -152,3 +152,58 @@ footer {
     cursor: pointer;
 }
 
+@media (max-width: 1200px){
+    
+    .review__date{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .header__list-items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__reviews{
+        height: 300px;
+    }
+
+    .main__input{
+        height: 140px;
+    }
+
+    .main__container-input-reviews{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem; 
+    }
+    
+    nav ul {
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+
+    .booking-button {
+        padding: 8px 15px;
+    }
+
+    .card img {
+        max-height: 200px; 
+    }
+}

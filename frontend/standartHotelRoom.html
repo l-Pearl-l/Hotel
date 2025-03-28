@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styleForClassesHotelRoom.css">
     <link rel="stylesheet" href="styles/styleModelWindowBooking.css">
+    <link rel="stylesheet" href="styles/styleAdditionalServices.css">
     <title>Стандартные номера</title>
 </head>
 <body>
@@ -134,14 +135,59 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
-            
+                    <span>Дополнительные Услуги: </span>
+                    <button class="open-additional-services button--style" >Открыть</button>
                     <button type="submit" class="submit-button">Забронировать</button>
                 </form>
+            </div>
+            <div class="additional-services">
+                <span class="exeption"></span>
+                <div class="additional-service__close">X</div>
+                <div class="additional-service__cards">
+                    <div class="rows">
+                        <div class="additional-service__card">
+                            <img class="main__card__image" src="images/AdditionalServices/Breakfast.jpg" alt="Завтра в номер">
+                            <h3>Завтрак в номер</h3>
+                            <div class="additional-service__buttons">
+                                <button class="additional-service__card__button breakfast button--style">Добавить</button>
+                                <button class="additional-service__delete breakfast" disabled>&#x1F5D1;</button> 
+                            </div>
+                        </div>
+                        <div class="additional-service__card">
+                            <img class="main__card__image" src="images/AdditionalServices/Nanny.jpg" alt="Няня">
+                            <h3>Няня</h3>
+                            <div class="additional-service__buttons">
+                                <button class="additional-service__card__button nanny button--style">Добавить</button>
+                                <button class="additional-service__delete nanny" disabled>&#x1F5D1;</button> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="additional-service__card">
+                            <img class="main__card__image" src="images/AdditionalServices/Spa.jpg" alt="Спа услуги">
+                            <h3>Спа услуги</h3>
+                            <div class="additional-service__buttons">
+                                <button class="additional-service__card__button spa button--style">Добавить</button>
+                                <button class="additional-service__delete spa" disabled>&#x1F5D1;</button> 
+                            </div>
+                        </div>
+                        <div class="additional-service__card">
+                            <img class="main__card__image" src="images/AdditionalServices/Chef.jpg" alt="Личный шеф-повар">
+                            <h3>Частный шеф-повар</h3>
+                            <div class="additional-service__buttons">
+                                <button class="additional-service__card__button chef button--style">Добавить</button>
+                                <button class="additional-service__delete chef" disabled>&#x1F5D1;</button> 
+                            </div>
+                        </div>
+                    </div>
+                    <button class="additional-service__apply">Подтвердить добавление</button>
+                </div>
             </div>
         </div>
     </div>
     <script src="js/openModalWindow.js"></script>
     <script src="js/interationBackend.js"></script>
     <script src="js/calcHeigthNavPanel.js"></script>
+    <script src="js/additionalService.js"></script>
 </body>
 </html>

@@ -1,25 +1,25 @@
-
+@import url(variables.css);
 
 .booking-modal-container{
     position: fixed;
-    display: none;
+    display: flex;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .booking-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff; /* Белый фон */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 20px; /* Отступы */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень */
-    width: 100%; /* Ширина на мобильных устройствах */
-    max-width: 400px; /* Максимальная ширина для больших экранов */
+    position: relative;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
 }
 
 .booking-modal__close{
@@ -28,69 +28,68 @@
 }
 
 .booking-modal h2 {
-    color: #001F3F; /* Тёмно-синий цвет */
-    text-align: center; /* Центрируем текст */
-    margin-bottom: 20px; /* Отступ снизу */
+    color: var(--dark-blue); 
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 
 .booking-modal label {
-    display: block; /* Блоковая модель для меток */
-    margin: 10px 0 5px; /* Отступы */
+    display: block; 
+    margin: 10px 0 5px;
 }
 
 .booking-modal input[type="date"],
 .booking-modal select {
-    width: 95%; /* Полная ширина */
-    padding: 10px; /* Отступы */
-    border: 1px solid #ddd; /* Легкая граница */
-    border-radius: 5px; /* Закругленные углы */
-    margin-bottom: 15px; /* Отступ снизу */
+    width: 95%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    margin-bottom: 15px;
 }
 
 .submit-button {
-    background-color: #001F3F; /* Тёмно-синий цвет кнопки */
-    color: white; /* Цвет текста */
-    border: none; /* Без границы */
-    border-radius: 5px; /* Закругленные углы */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    cursor: pointer; /* Изменяем курсор при наведении */
-    width: 100%; /* Полная ширина */
+    background-color: var(--dark-blue); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px;
+    cursor: pointer; 
+    width: 100%; 
 }
 
 .submit-button:hover {
-    background-color: #0056b3; /* Темнее при наведении */
+    background-color: #0056b3;
 }
 
-/* Адаптивные стили */
 @media (max-width: 768px) {
     .booking-modal {
-        padding: 15px; /* Уменьшаем отступы */
+        padding: 15px; 
     }
 
     .booking-modal h2 {
-        font-size: 1.5em; /* Уменьшаем размер заголовка */
+        font-size: 1.5em; 
     }
 
     .booking-modal label {
-        font-size: 0.9em; /* Уменьшаем размер шрифта для лейблов */
+        font-size: 0.9em; 
     }
 
     .booking-modal input[type="date"],
     .booking-modal select {
-        padding: 8px; /* Уменьшаем отступы для полей */
+        padding: 8px;
     }
 
     .submit-button {
-        padding: 8px; /* Уменьшаем отступы для кнопки */
+        padding: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .booking-modal {
-        max-width: 90%; /* Ширина на очень маленьких экранах */
+        max-width: 90%;
     }
 
     .booking-modal h2 {
-        font-size: 1.3em; /* Ещё меньше размер заголовка */
+        font-size: 1.3em;
     }
 }
