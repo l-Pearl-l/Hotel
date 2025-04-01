@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styleForClassesHotelRoom.css">
     <link rel="stylesheet" href="styles/styleModelWindowBooking.css">
+    <link rel="stylesheet" href="styles/styleAdditionalServices.css">
+    <link rel="stylesheet" href="styles/stylePayment.css">
     <title>Комфортные номера</title>
 </head>
 <body>
@@ -27,31 +29,31 @@
         <main class="main">
             <section class="main__cards">   
                 <div class="main__cards__row">
-                    <div class="main__card comfort">
+                    <div class="main__card" data-room-id="comfort1" data-price-room="4000">
                         <img class="main__card__image" src="images/ClassRoomComfort/Comfort1.jpg" alt="Комфортный номер">
-                        <h3>Комфорт</h3>
+                        <h3>Комфорт :: 4000</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button comfort1">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="comfort2" data-price-room="4200">
                         <img class="main__card__image" src="images/ClassRoomComfort/Comfort2.jpg" alt="Комфортный номер">
-                        <h3>Комфорт</h3>
+                        <h3>Комфорт :: 4200</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button comfort2">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card"  data-room-id="comfort3" data-price-room="4300"> 
                         <img class="main__card__image" src="images/ClassRoomComfort/Comfort3.jpg" alt="Комфортный номер">
-                        <h3>Комфорт</h3>
+                        <h3>Комфорт :: 4300</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
@@ -62,9 +64,9 @@
                     </div>
                 </div>
                 <div class="main__cards__row">
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="comfort4" data-price-room="4500">
                     <img class="main__card__image" src="images/ClassRoomComfort/Comfort4.jpg" alt="Комфортный номер">
-                    <h3>Комфорт</h3>
+                    <h3>Комфорт :: 4500</h3>
                     <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
@@ -73,9 +75,9 @@
                         </ul>
                         <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="comfort5" data-price-room="4700">
                     <img class="main__card__image" src="images/ClassRoomComfort/Comfort5.jpg" alt="Комфортный номер">
-                    <h3>Комфорт</h3>
+                    <h3>Комфорт :: 4700</h3>
                     <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
@@ -84,9 +86,9 @@
                         </ul>
                         <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="comfort6" data-price-room="4900">
                     <img class="main__card__image" src="images/ClassRoomComfort/Comfort6.jpg" alt="Комфортный номер">
-                    <h3>Комфорт</h3>
+                    <h3>Комфорт :: 4900</h3>
                     <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
@@ -106,42 +108,10 @@
             </section>
             <p>&copy; 2025 Гостиница "Созвездие". Все права защищены.</p>
         </footer>
-        <div class="booking-modal-container">
-            <div class="booking-modal">
-                <div class="booking-modal__close">X</div>
-                <h2>Бронирование номера</h2>
-                <form id="booking-form" class="booking-form">
-                    <label for="checkin">Дата заезда:</label>
-                    <input type="date" id="checkin" name="arrival" required>
-            
-                    <label for="checkout">Дата выезда:</label>
-                    <input type="date" id="checkout" name="departure" required>
-                    <span class="exeption-date">Дата заезда не может быть позже даты выезда</span>
-                    <span class="exeption-date-past">Нельзя забронировать на прошедшую дату</span>
-                    <label for="adults">Количество взрослых:</label>
-                    <select id="adults" name="adults" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-            
-                    <label for="children">Количество детей:</label>
-                    <select id="children" name="children">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-            
-                    <button type="submit" class="submit-button">Забронировать</button>
-                </form>
-            </div>
-        </div>
     </div>
-    <script src="js/openModalWindow.js"></script>
-    <script src="js/interationBackend.js"></script>
-    <script src="js/calcHeigthNavPanel.js"></script>
+    <script type="module" src="js/openModalWindow.js"></script>
+    <script type="module" src="js/setupProcessingForm.js"></script>
+    <script type="module" src="js/calcHeigthNavPanel.js"></script>
+    <script type="module" src="js/additionalService.js"></script>
 </body>
 </html>

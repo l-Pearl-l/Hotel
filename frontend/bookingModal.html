@@ -1,0 +1,76 @@
+<div class="booking-modal-container">
+    <div class="booking-modal">
+        <div class="booking-modal__close">X</div>
+        <h2>Бронирование номера</h2>
+        <form id="booking-form" class="booking-form">
+            <span class="exeption-date"></span>
+            <label for="checkin">Дата заезда:</label>
+            <input type="date" id="checkin" name="arrival" class="arrival-input" required>
+    
+            <label for="checkout">Дата выезда:</label>
+            <input type="date" id="checkout" name="departure" class="departure-input" required>
+            <label for="adults">Количество взрослых:</label>
+            <select id="adults" name="adults" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+    
+            <label for="children">Количество детей:</label>
+            <select id="children" name="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <span>Дополнительные услуги: </span>
+            <button type="button" class="open-additional-services button--style" >Открыть</button>
+            <button type="submit" class="submit-button procced-payment">Перейти к оплате</button>
+        </form>
+    </div>
+    <div class="additional-services">
+        <span class="exeption"></span>
+        <div class="additional-service__close">X</div>
+        <div class="additional-service__cards">
+            <div class="rows">
+                <div class="additional-service__card" data-name-service="breakfast" data-price-service="1000">
+                    <img class="main__card__image" src="images/AdditionalServices/Breakfast.jpg" alt="Завтра в номер">
+                    <h3 data-price="1000">Завтрак в номер :: 1000</h3>
+                    <div class="additional-service__buttons">
+                        <button class="additional-service__card__button button--style">Добавить</button>
+                        <button class="additional-service__delete" disabled>&#x1F5D1;</button> 
+                    </div>
+                </div>
+                <div class="additional-service__card" data-name-service="nanny" data-price-service="1500">
+                    <img class="main__card__image" src="images/AdditionalServices/Nanny.jpg" alt="Няня">
+                    <h3 data-price="1500">Няня :: 1500</h3>
+                    <div class="additional-service__buttons">
+                        <button class="additional-service__card__button button--style">Добавить</button>
+                        <button class="additional-service__delete" disabled>&#x1F5D1;</button> 
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="additional-service__card" data-name-service="spa" data-price-service="3000">
+                    <img class="main__card__image" src="images/AdditionalServices/Spa.jpg" alt="Спа услуги">
+                    <h3>Спа услуги :: 3000</h3>
+                    <div class="additional-service__buttons">
+                        <button class="additional-service__card__button button--style">Добавить</button>
+                        <button class="additional-service__delete" disabled>&#x1F5D1;</button> 
+                    </div>
+                </div>
+                <div class="additional-service__card" data-name-service="chef" data-price-service="2500">
+                    <img class="main__card__image" src="images/AdditionalServices/Chef.jpg" alt="Личный шеф-повар">
+                    <h3>Шеф-повар :: 2500</h3>
+                    <div class="additional-service__buttons">
+                        <button class="additional-service__card__button button--style">Добавить</button>
+                        <button class="additional-service__delete" disabled>&#x1F5D1;</button> 
+                    </div>
+                </div>
+            </div>
+            <button class="additional-service__apply">Подтвердить добавление</button>
+        </div>
+    </div>
+</div>

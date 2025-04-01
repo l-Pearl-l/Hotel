@@ -1,11 +1,10 @@
-package com.example.backend.entities;
+package com.example.backend.store.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
 @Getter
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity

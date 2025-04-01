@@ -1,0 +1,30 @@
+
+<div class="payment-container">
+    <div class="payment-modal">
+        <div class="payment-model__close">X</div>
+        <h2>Бронирование номера</h2>
+        <form id="payment-form" class="payment-form">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="nameGuest">
+            <label for="checkin">Фамилия</label>
+            <input type="text" id="surname" name="surnameGuest">
+            <label for="checkout">Отчество</label>
+            <input type="text" id="patronymic" name="patronymicGuest">
+            <label for="phone">Номер телефона</label>
+            <input type="text" name="phone" id="phone" placeholder="+7 (___) ___ __ __">
+            <label for="number-bank-card">Номер карты</label>
+            <input type="text" name="numberBankCard" id="number-bank-card" placeholder="0000 0000 0000 0000">
+            <div class="flex--box">
+                <div>
+                    <label for="period">Срок действия карты</label>
+                    <input type="text" name="cardValidityPeriod" id="period" placeholder="25/30">
+                </div>
+                <div class="card__cvv">
+                    <label for="cvv">CVV</label>
+                    <input type="password" name="cvv" id="cvv" placeholder="000"> 
+                </div>
+            </div>
+            <button type="submit" class="submit-button book-button">Забронировать</button>
+        </form>
+    </div>
+</div>

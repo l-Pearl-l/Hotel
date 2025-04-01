@@ -1,8 +1,8 @@
-package com.example.backend.services;
+package com.example.backend.store.services;
 
 
-import com.example.backend.entities.Review;
-import com.example.backend.repositories.ReviewRepository;
+import com.example.backend.store.entities.Review;
+import com.example.backend.store.repositories.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

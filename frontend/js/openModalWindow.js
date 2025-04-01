@@ -1,23 +1,54 @@
 
+import { initAdditionalService } from "./additionalService.js";
+import { setupProcessingForm} from "./setupProcessingForm.js";
+import { loadWindowPayment } from "./payment.js";
 
-const bookingButtons = document.querySelectorAll(".booking-button");
-const body = document.querySelector("body");
-const modal = document.querySelector(".booking-modal-container");
-const closeModal = document.querySelector(".booking-modal__close");
+function loadBookingModal() {
+    fetch('bookingModal.html')
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector("footer").insertAdjacentHTML('afterend', html);
+            initModalHandlers();
+            if(document.querySelector(".booking-modal-container")){
+                initAdditionalService();
+                setupProcessingForm();
+            }
 
-for(let index = 0; index < bookingButtons.length; index++){
-    let bookingButton = bookingButtons[index];
-    bookingButton.addEventListener("click", function(){
-        openModal();
+        })
+        .catch(error => console.error('Ошибка загрузки модального окна:', error));
+}
+
+function initModalHandlers() {
+    const bookingButtons = document.querySelectorAll('.booking-button');
+    const closeButton = document.querySelector('.booking-modal__close');
+    const paymentButton = document.querySelector(".procced-payment");
+    const bookingModalContainer = document.querySelector('.booking-modal-container');
+    const departureInput = document.querySelector(".departure-input");
+
+    paymentButton.disabled = true;
+    paymentButton.style.opacity = 0.6;
+
+    bookingButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            bookingModalContainer.style.display = 'flex';
+        });
+    });
+    
+    closeButton.addEventListener('click', () => {
+        bookingModalContainer.style.display = 'none';
+    });
+
+    departureInput.addEventListener("input", () => {
+        paymentButton.disabled = false;
+        paymentButton.style.opacity = 1;
+    
+    })
+
+    paymentButton.addEventListener("click", () => {
+        bookingModalContainer.style.display = "none";
+        loadWindowPayment();
     })
 }
 
-
-function openModal(){
-    modal.style.display = "block";
-}
-
-closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-})
+document.addEventListener('DOMContentLoaded', loadBookingModal);
 

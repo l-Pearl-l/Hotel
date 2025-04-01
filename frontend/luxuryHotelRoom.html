@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styleForClassesHotelRoom.css">
     <link rel="stylesheet" href="styles/styleModelWindowBooking.css">
+    <link rel="stylesheet" href="styles/styleAdditionalServices.css">
+    <link rel="stylesheet" href="styles/stylePayment.css">
     <title>Люкс Шаленые номера</title>
 </head>
 <body>
@@ -27,73 +29,73 @@
         <main class="main">
             <section class="main__cards">   
                 <div class="main__cards__row">
-                    <div class="main__card luxury">
+                    <div class="main__card" data-room-id="luxury1" data-price-room="6000">
                         <img class="main__card__image" src="images/ClassRoomLuxury/Luxury1.jpg" alt="Люкс Шале номер">
-                        <h3>Люкс Шале</h3>
+                        <h3>Люкс Шале :: 6000</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury1">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="luxury2" data-price-room="6200">
                         <img class="main__card__image" src="images/ClassRoomLuxury/Luxury2.jpg" alt="Люкс Шале номер">
-                        <h3>Люкс Шале</h3>
+                        <h3>Люкс Шале :: 6200</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury2">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="luxury3" data-price-room="6300">
                         <img class="main__card__image" src="images/ClassRoomLuxury/Luxury3.jpg" alt="Люкс Шале номер">
-                        <h3>Люкс Шале</h3>
+                        <h3>Люкс Шале :: 6300</h3>
                         <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury3">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
                 </div>
                 <div class="main__cards__row">
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="luxury4" data-price-room="6500">
                     <img class="main__card__image" src="images/ClassRoomLuxury/Luxury4.jpg" alt="Люкс Шале номер">
-                    <h3>Люкс Шале</h3>
-                    <ul>
+                    <h3>Люкс Шале :: 6500</h3>
+                        <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury4">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="luxury5" data-price-room="6700">
                     <img class="main__card__image" src="images/ClassRoomLuxury/Luxury5.jpg" alt="Люкс Шале номер">
-                    <h3>Люкс Шале</h3>
+                    <h3>Люкс Шале :: 6700</h3>
                     <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury5">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
-                    <div class="main__card">
+                    <div class="main__card" data-room-id="luxury6" data-price-room="6900">
                     <img class="main__card__image" src="images/ClassRoomLuxury/Luxury6.jpg" alt="Люкс Шале номер">
-                    <h3>Люкс Шале</h3>
-                    <ul>
+                    <h3>Люкс Шале :: 6900</h3>
+                        <ul>
                             <li>Однокомнатный номер</li>
                             <li>Вид на хвойный лес</li>
                             <li>Двуспальная кровать</li>
                             <li>Ванная комната</li>
                         </ul>
-                        <button class="booking-button luxury6">Забронировать</button>
+                        <button class="booking-button">Забронировать</button>
                     </div>
                 </div>
             </section>
@@ -106,42 +108,10 @@
             </section>
             <p>&copy; 2025 Гостиница "Созвездие". Все права защищены.</p>
         </footer>
-        <div class="booking-modal-container">
-            <div class="booking-modal">
-                <div class="booking-modal__close">X</div>
-                <h2>Бронирование номера</h2>
-                <form id="booking-form" class="booking-form">
-                    <label for="checkin">Дата заезда:</label>
-                    <input type="date" id="checkin" name="arrival" required>
-                    <span class="exeption-date">Дата заезда не может быть позже даты выезда</span>
-                    <span class="exeption-date-past">Нельзя забронировать на прошедшую дату</span>            
-                    <label for="checkout">Дата выезда:</label>
-                    <input type="date" id="checkout" name="departure" required>
-            
-                    <label for="adults">Количество взрослых:</label>
-                    <select id="adults" name="adults" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-            
-                    <label for="children">Количество детей:</label>
-                    <select id="children" name="children">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-            
-                    <button type="submit" class="submit-button">Забронировать</button>
-                </form>
-            </div>
-        </div>
     </div>
-    <script src="js/openModalWindow.js"></script>
-    <script src="js/interationBackend.js"></script>
-    <script src="js/calcHeigthNavPanel.js"></script>
+    <script type="module" src="js/openModalWindow.js"></script>
+    <script type="module" src="js/setupProcessingForm.js"></script>
+    <script type="module" src="js/calcHeigthNavPanel.js"></script>
+    <script type="module" src="js/additionalService.js"></script>
 </body>
 </html>

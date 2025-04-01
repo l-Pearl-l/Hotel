@@ -8,7 +8,7 @@
     border-radius: 10px; 
     padding: 20px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-    width: 450px;
+    width: 500px;
     gap: 10px;
     text-align: center;
 }
@@ -78,9 +78,4 @@
 .rows{
     display: flex;
     margin: 5px 5px 10px 5px;
-}
-
-.exeption{
-    display: none;
-    color: var(--red);
 }

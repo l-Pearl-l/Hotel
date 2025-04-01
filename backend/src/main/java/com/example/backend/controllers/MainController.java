@@ -1,10 +1,10 @@
 package com.example.backend.controllers;
 
-import com.example.backend.dto.HotelRoomDTO;
-import com.example.backend.entities.HotelRoom;
-import com.example.backend.entities.Review;
-import com.example.backend.services.HotelRoomService;
-import com.example.backend.services.ReviewService;
+import com.example.backend.store.dto.HotelRoomDTO;
+import com.example.backend.store.entities.HotelRoom;
+import com.example.backend.store.entities.Review;
+import com.example.backend.store.services.HotelRoomService;
+import com.example.backend.store.services.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -37,7 +37,8 @@ public class MainController {
 
     @PostMapping("/checkIn")
     public String saveChooseRoom(@RequestBody HotelRoom hotelRoom){
-        hotelRoomService.bookHotelRoom(hotelRoom);
+        System.out.println(hotelRoom.toString());
+//        hotelRoomService.bookHotelRoom(hotelRoom);
         return "200";
     }
 

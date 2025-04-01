@@ -1,6 +1,6 @@
 @import url(variables.css);
 
-.booking-modal-container{
+.payment-container{
     position: fixed;
     display: none;
     width: 100%;
@@ -11,7 +11,7 @@
     justify-content: space-evenly;
 }
 
-.booking-modal {
+.payment-modal {
     position: relative;
     background-color: var(--white); 
     border-radius: 10px; 
@@ -21,29 +21,29 @@
     max-width: 400px; 
 }
 
-.booking-modal__close{
+.payment-model__close{
     position: absolute;
     right: 20px;
 }
 
-.booking-modal h2 {
+.payment-modal h2 {
     color: var(--dark-blue); 
     text-align: center; 
     margin-bottom: 20px; 
 }
 
-.booking-modal label {
+.payment-modal label {
     display: block; 
     margin: 10px 0 5px;
 }
 
-.booking-modal input[type="date"],
-.booking-modal select {
+.payment-modal input{
     width: 95%; 
     padding: 10px; 
     border: 1px solid #ddd; 
     border-radius: 5px; 
     margin-bottom: 15px;
+    outline: none;
 }
 
 .submit-button {
@@ -60,26 +60,30 @@
     background-color: #0056b3;
 }
 
-.exeption-date{
-    color: var(--red);
+.flex--box{
+    box-sizing: border-box;
+    display: flex;
 }
 
+.card__cvv{
+    margin-left: 20px;
+}
 
 @media (max-width: 768px) {
-    .booking-modal {
+    .payment-modal {
         padding: 15px; 
     }
 
-    .booking-modal h2 {
+    .payment-modal h2 {
         font-size: 1.5em; 
     }
 
-    .booking-modal label {
+    .payment-modal label {
         font-size: 0.9em; 
     }
 
-    .booking-modal input[type="date"],
-    .booking-modal select {
+    .payment-modal input[type="date"],
+    .payment-modal select {
         padding: 8px;
     }
     .submit-button {
@@ -88,11 +92,11 @@
 }
 
 @media (max-width: 480px) {
-    .booking-modal {
+    .payment-modal {
         max-width: 90%;
     }
 
-    .booking-modal h2 {
+    .payment-modal h2 {
         font-size: 1.3em;
     }
 }
