@@ -2,13 +2,16 @@
 
 export const dataForServer = {
     
+    chooseRoom: null,
     arrivalDate: "",
     departureDate: "",
-    numberOfAdults: 0,
-    numberOfChildren: 0,
+    numberOfAdults: null,
+    numberOfChildren: null,
     groupAdditionalServices: [],
-    priceAdditionalServices: 0,
-    priceChooseRoom: 0,
+    priceAdditionalServices: null,
+    priceChooseRoom: null,
+    totalPrice: null,
+    isBusy: true,
 
     nameGuest: "",
     surnameGuest: "",
@@ -17,4 +20,5 @@ export const dataForServer = {
     numberBankCard: "",
     validityPeriod: "",
     cvv: ""
+    
 }

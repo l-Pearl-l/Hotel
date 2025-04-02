@@ -24,6 +24,7 @@ function initModalHandlers() {
     const paymentButton = document.querySelector(".procced-payment");
     const bookingModalContainer = document.querySelector('.booking-modal-container');
     const departureInput = document.querySelector(".departure-input");
+    
 
     paymentButton.disabled = true;
     paymentButton.style.opacity = 0.6;
@@ -41,9 +42,8 @@ function initModalHandlers() {
     departureInput.addEventListener("input", () => {
         paymentButton.disabled = false;
         paymentButton.style.opacity = 1;
-    
     })
-
+    
     paymentButton.addEventListener("click", () => {
         bookingModalContainer.style.display = "none";
         loadWindowPayment();

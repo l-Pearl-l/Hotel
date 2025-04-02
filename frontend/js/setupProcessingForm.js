@@ -2,32 +2,9 @@ import { dataForServer } from "./dataForServer.js";
 
 
 const bookingButtons = document.querySelectorAll('.booking-button');
-let busyHotelRooms = []
 let chooseRoom;
 let priceChooseRoom;
 let dataForm = {};
-
-// window.onload = function(){
-//     fetch("http://localhost:8080/hotel/isBusy", {
-//         headers: {
-//             "Content-type": "application/json"
-//         }
-//     }).then(response => response.json())
-//       .then(result => {
-//           for(let index = 0; index < result.length; index++){
-//             busyHotelRooms[index] = result[index];
-//           }
-//           for(let index = 0; index < busyHotelRooms.length; index++){
-//             let buttonInRoomCard = document.querySelector(`.${busyHotelRooms[index].chooseRoom}`)
-//             let dateDepartureInRoomCard = busyHotelRooms[index].departureDate;
-//             if(buttonInRoomCard !== null){
-//                 buttonInRoomCard.textContent = `Номер освободится: ${dateDepartureInRoomCard}`;
-//                 buttonInRoomCard.disabled = true;
-//                 buttonInRoomCard.parentElement.style.opacity = 0.6;
-//             }
-//           }
-//     })
-// }
 
 for(let index = 0; index < bookingButtons.length; index++){
     let button = bookingButtons[index];

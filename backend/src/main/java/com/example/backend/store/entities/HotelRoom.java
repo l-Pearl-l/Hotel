@@ -18,11 +18,11 @@ public class HotelRoom {
     private String chooseRoom;
     private String arrivalDate;
     private String departureDate;
-    private int numberOfAdults;
-    private int numberOfChildren;
+    private String numberOfAdults;
+    private String numberOfChildren;
     private List<String> groupAdditionalServices;
-    private int priceChooseRoom;
-    private int priceAdditionalServices;
+    private String priceChooseRoom;
+    private String priceAdditionalServices;
     private String nameGuest;
     private String surnameGuest;
     private String patronymicGuest;
@@ -30,8 +30,8 @@ public class HotelRoom {
     private String numberBankCard;
     private String validityPeriod;
     private String cvv;
-    private int totalPrice;
-    private boolean isBusy;
+    private String totalPrice;
+    private String isBusy;
 
     @Override
     public String toString() {

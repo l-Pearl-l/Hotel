@@ -50,7 +50,7 @@ function initPaymentHandlers(){
         event.preventDefault();
         getDataForm(paymentForm);
         writeData();
-        console.log(dataForServer);
+
         fetch("http://localhost:8080/hotel/checkIn", {
             method: "POST", 
             headers: {
@@ -59,6 +59,8 @@ function initPaymentHandlers(){
             },
             body: JSON.stringify(dataForServer)
         })
+        bookRoom(dataForServer.chooseRoom, dataForServer.departureDate);
+        paymentContainer.style.display = "none";
     })
 
     
@@ -79,6 +81,7 @@ function writeData(){
     dataForServer.numberBankCard = dataPaymentForm.numberBankCard;
     dataForServer.validityPeriod = dataPaymentForm.cardValidityPeriod;
     dataForServer.cvv = dataPaymentForm.cvv;
+    dataForServer.totalPrice = Number(dataForServer.priceChooseRoom) + Number(dataForServer.priceAdditionalServices);
 }
 
 function initInputMasks() {
@@ -110,4 +113,12 @@ function initInputMasks() {
         delimiters: [' (', ') ', '-', '-'],
         prefix: '+7'
     });
+}
+
+function bookRoom(room, date){    
+    const card = document.querySelector(`[data-room-id="${room}"]`)
+    const button = card.children[3];
+    button.disabled = true;
+    button.textContent = `Номер освободится: ${date}`;
+    card.style.opacity = 0.6;
 }

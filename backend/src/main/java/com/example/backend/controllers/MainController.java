@@ -25,6 +25,11 @@ public class MainController {
         this.reviewService = reviewService;
     }
 
+    @GetMapping("roomFreeExpired")
+    public void checkRoomFreeExpired(){
+        hotelRoomService.deleteRoomFreeExpired();
+    }
+
     @GetMapping("/isBusy")
     public List<HotelRoomDTO> returnIsBusyHotelRoom() {
         return hotelRoomService.checkIsBusyHotelRoom();
@@ -38,7 +43,7 @@ public class MainController {
     @PostMapping("/checkIn")
     public String saveChooseRoom(@RequestBody HotelRoom hotelRoom){
         System.out.println(hotelRoom.toString());
-//        hotelRoomService.bookHotelRoom(hotelRoom);
+        hotelRoomService.bookHotelRoom(hotelRoom);
         return "200";
     }
 

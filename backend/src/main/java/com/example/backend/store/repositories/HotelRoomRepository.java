@@ -12,6 +12,7 @@ import java.util.List;
 @Repository
 public interface HotelRoomRepository extends JpaRepository<HotelRoom, String> {
 
-    @Query("SElECT hr.chooseRoom, hr.departureDate FROM HotelRoom AS hr WHERE hr.isBusy = true")
+    @Query("SElECT hr.chooseRoom, hr.departureDate FROM HotelRoom AS hr WHERE hr.isBusy = 'true'")
     List<Object[]> findAvailableHotelRoom();
+
 }
